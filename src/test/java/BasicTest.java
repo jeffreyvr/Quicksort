@@ -3,8 +3,6 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNull;
 
 public class BasicTest {
     @Test
@@ -42,5 +40,12 @@ public class BasicTest {
         Quicksort.sort(numbers, 0, numbers.length - 1);
 
         assertEquals(Arrays.toString(numbers), "[0, 0, 7, 51, 99]");
+    }
+
+    @Test
+    public <T extends Comparable<T>> void test_returns_correct_median_of_three() {
+        Integer[] numbers = new Integer[]{7, 0, 0, 99, 51, 100};
+
+        assertEquals(Quicksort.getMedianOfThree(numbers[0], numbers[3], numbers[5]), numbers[3]);
     }
 }

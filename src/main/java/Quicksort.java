@@ -42,7 +42,7 @@ public class Quicksort {
      * @param <T>
      * @return the median
      */
-    private static <T extends Comparable<T>> T getMedianOfThree(T first, T middle, T last) {
+    public static <T extends Comparable<T>> T getMedianOfThree(T first, T middle, T last) {
         if (first.compareTo(middle) > 0) {
             if (middle.compareTo(last) > 0) {
                 return middle;
